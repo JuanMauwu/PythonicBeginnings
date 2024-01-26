@@ -22,4 +22,10 @@ print(type(int))
 
 #ejercicio 5
 a = "abc"
-a = 'abc'   #LO MISMO
+a = 'abc'   #Lo mismo
+
+#ejercicio 6
+A = 1
+a = "hola" #Es sensible
+print(A)
+print(a)
