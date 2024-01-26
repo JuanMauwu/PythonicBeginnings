@@ -1,0 +1,10 @@
+git clone (traer el repositorio desde git a vs code)
+git ls (lista los archivos y carpetas de la ruta)
+git cd (te mueve a la ruta seleccionada, con ../ se devuelve una ruta antes)
+git status (muestra la condicion del archivo)
+git add (añade el cambio de mi archivo para hacer el commit)
+git commit -m "mensaje" (colocar mensaje significativo segun el cambio)
+git push origin main (sube mis cambios de codigo a mi repositorio)
+git pull origin main (baja los cambios del repositorio)
+
+
