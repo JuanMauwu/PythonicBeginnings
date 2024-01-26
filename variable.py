@@ -13,3 +13,13 @@ print(x)
 string = str(5)
 int = int(5)
 float = float(5)
+
+#ejercicio 4
+string = "1"
+int = 1
+print(type(string))
+print(type(int))
+
+#ejercicio 5
+a = "abc"
+a = 'abc'   #LO MISMO
