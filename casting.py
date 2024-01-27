@@ -4,7 +4,7 @@ y = int(2.546534)
 print(x)
 print(y)
 
-#ejercicio 3
+#ejercicio 2
 x = float(1)
 y = float("1234124")
 z = float("2132.124")
@@ -14,7 +14,7 @@ print(y)
 print(z)
 print(a)
 
-#ejercicio 4
+#ejercicio 3
 x = str(1213)
 y = str("123123")
 z = str(213.214214)
