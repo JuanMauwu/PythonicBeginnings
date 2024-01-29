@@ -29,3 +29,6 @@ A = 1
 a = "hola" #Es sensible
 print(A)
 print(a)
+
+#ejercicio 7
+x = y = z = "Hello" #un valor para muchas variables
