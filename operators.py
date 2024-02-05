@@ -17,10 +17,12 @@ print(x // y)
 x = 10          #OPERADORES DE ASIGNACION
 x += 5
 print(x)
+#15
 
 x = 10
 x -= 5
 print(x)
+# = 5
 
 x = 10
 x *= 5
