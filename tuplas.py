@@ -70,8 +70,8 @@ if "kiwi" in fruits:
 
 #----------------------------
     
-#ejercicio 16
-x = (1, 2)
+#ejercicio 16  
+x = (1, 2)       #las tuplas al ser inmutables no permiten modificarlas, podemos convertirlas en listas modificar la lista y convertirla a tupla.
 x = list(x)
 x.append(3)
 x = tuple(x)
