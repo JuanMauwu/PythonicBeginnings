@@ -78,5 +78,87 @@ x = tuple(x)
 # (1, 2, 3)
 
 
+#ejercicio 17
+cars = ("nissan", "toyota", "ferrari")  #otra forma, pero es creando una nueva tupla.
+x = ("honda",)
+cars += x
+# ('nissan', 'toyota', 'ferrari', 'honda')
 
+#ejercicio 18
+x = (1, 2)        #no se pueden eliminar elementos, se debe convertir a lista y usar el metodo remove().
+x = list(x)
+x.remove(2)
+x = tuple(x)
+# (1,)
 
+#ejercicio 19
+cars = ("nissan", "toyota", "ferrari")  #o se usa la palabra clave del para eliminar toda la tupla.
+del cars
+
+#----------------------------
+
+#ejercicio 20
+colors = ("blue", "green", "red")   #a esto se le llama desempaquetar. Cada variable queda con el dato de su lugar.
+(blue, green, red) = colors
+print(blue) #blue
+print(green) #green
+print(red)  #red
+
+#ejercicio 21
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")    
+(apple, banana, *cherry) = fruits #aqui el numero de variables no corresponde al numero de elementos, se agrega un * y esta variable se vlveria una lista con los elementos restantes.
+print(cherry) #['cherry', 'strawberry', 'raspberry']
+
+#ejercicio 22
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry") 
+(verde, *tropical, rojo) = fruits           #python acomoda los valores a la variable hasta que el número de valores restantes coincida con el número de variables restantes.
+print(verde) #apple 
+print(tropical) #['banana', 'cherry', 'strawberry']
+print(rojo) #raspberry
+
+#----------------------------
+
+#ejercicio 23
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry") #bucles con tuplas.
+for x in fruits:
+    print(x)
+#apple
+#banana
+#cherry
+#strawberry
+#raspberry
+    
+#ejercicio 24
+fruits = ("apple", "banana", "cherry") #usando las funciones range() y len().
+for i in range(len(fruits)):
+    print(fruits[i])
+#apple
+#banana
+#cherry
+    
+#ejercicio 25
+fruits = ("apple", "banana", "cherry")  #usando el while.
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
+#apple
+#banana
+#cherry
+    
+#----------------------------
+    
+#ejercicio 26
+fruits = ("apple", "banana", "cherry")      #unir dos tuplas, se debe crear otra.
+cars = ("nissan", "toyota", "ferrari")
+new_tuple = fruits + cars
+# ('apple', 'banana', 'cherry', 'nissan', 'toyota', 'ferrari')  
+
+#ejercicio 27
+fruits = ("apple", "banana", "cherry")      #puedes multiplicar una tupla.
+new = fruits * 2
+# ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+
+#METODOS DE TUPLAS
+#count()	Returns the number of times a specified value occurs in a tuple
+#index()	Searches the tuple for a specified value and returns the position of where it was found
