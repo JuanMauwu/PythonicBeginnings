@@ -267,6 +267,23 @@ lista_dos = [1, 2, 3]
 lista_uno.extend(lista_dos)
 #lista_uno = ['a', 'b', 'c', 1, 2, 3]
 
+#ejercicio 49
+import sys
+
+lista = [1, 2, 3]
+tupla = (1, 2, 3)
+
+# Tamaño en memoria de la lista
+tamano_lista = sys.getsizeof(lista)
+
+# Tamaño en memoria de la tupla
+tamano_tupla = sys.getsizeof(tupla)
+
+print("Tamaño en memoria de la lista:", tamano_lista, "bytes")
+# Tamaño en memoria de la lista: 88 bytes
+print("Tamaño en memoria de la tupla:", tamano_tupla, "bytes")
+# Tamaño en memoria de la tupla: 64 bytes
+
 #----------------------------
 
 #LISTADO DE METODOS DE LISTAS
