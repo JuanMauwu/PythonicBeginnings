@@ -11,6 +11,7 @@ names = ["Juan", "Sebastian", "Luisa", "Juan"] #permite duplicados.
 #ejercicio 3
 names = ["Juan", "Sebastian", "Luisa", "Juan"]
 print(len(names))           #metodo len() para saber el numero de elementos de la lista.
+# 4
 
 #ejercicio 4
 names = ["Juan", "Sebastian", "Luisa", "Juan"]
@@ -22,7 +23,8 @@ variado = ["Juan", 1, 2.5, False]  #las listas pueden contener diferentes tipos 
 
 #ejercicio 6
 lista = ["Juan", 1, 2.5, False]  #es definido como tipo dato list.
-print(type(list))
+print(type(lista))
+# <class 'list'>
 
 #ejercicio 6
 animales = list(["perro", "gato","pajaro"]) #tambien se puede utilizar un constructor para crear una lista.
@@ -30,14 +32,16 @@ animales = list(["perro", "gato","pajaro"]) #tambien se puede utilizar un constr
 #ejercicio 7
 fruits = ["banana", "apple", "orange", "banana"]
 print(fruits[1])                                       #acceder y muestra el segundo item de la lista.
+# apple
 
 #ejercicio 8
 fruits = ["banana", "apple", "orange", "banana"]       #si se usa el negativo comienza de derecha a izquierda desde -1.
 print(fruits[-1])
+# banana
 
 #ejercicio 9
 fruits = ["banana", "apple", "orange", "banana"] 
-print(fruits[0 : 2])                                   #para seleccionar ciertos elementos en especificos sin tomar el ultimo.
+print(fruits[-4:3])                                   #para seleccionar ciertos elementos en especificos sin tomar el ultimo.
 #['banana', 'apple']
 
 #ejercicio 10
@@ -59,6 +63,8 @@ print(fruits[-3:-1])
 fruits = ["banana", "apple", "orange", "banana"]
 print("apple" in fruits)
 #True
+print("kiwi" in fruits)
+#False
 
 #ejercicio 14
 fruits = ["banana", "apple", "orange", "banana"]    #modificar un elemento de la lista.
@@ -128,6 +134,7 @@ sports.clear()
 sports = ["swimming", "soccer", "basketball"] 
 deportes = []
 for x in sports:
+    print(x)
     deportes.append(x)
 
 #al imprimir la lista --> deportes = ['swimming', 'soccer', 'basketball'].
@@ -171,6 +178,10 @@ doble = [x * 2 for x in numeros]              #en este caso se debe crear una nu
 print(doble)                                  #no fue necesario usar una condicion.
 #[2, 4, 6, 8, 10]
 
+potencia = [x ** 2 for x in numeros] 
+print(potencia)
+#[1, 4, 9, 16, 25]
+
 #ejercicio 33 "crear una lista con los elementos de 'palabras' que sobrepasen las 3 letras"
 palabras = ["sol", "luna", "estrella", "cielo", "nube"] #en este no se le da cambio a los elementos pero si se implementa una condicion
 largas = [x for x in palabras if len(x) > 3]
@@ -200,6 +211,10 @@ fruits = ["apple", "banana", "cherry", "kiwi", "mango"]  #ejem poner el resultad
 nueva_lista = [x.upper() for x in fruits]
 #['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
 
+fruit_m = ['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
+new_list = [x.lower() for x in fruit_m]
+#['apple', 'banana', 'cherry', 'kiwi', 'mango']
+
 #ejercicio 39
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]  #poner el resultado como quiera.
 new = ["hello" for x in fruits]
@@ -213,8 +228,10 @@ new = [x if x == "banana" else "orange" for x in fruits] #devuelva x si x es == 
 #----------------------------
 
 #ejercicio 41 
-fruits = [ "banana", "kiwi", "cherry", "mango", "apple"] #metodo para ordenar ascendentemente.
+fruits = [ "banana", "kiwi", "cherry", "mango", "apple", ["watermelon", "orange"]] #metodo para ordenar ascendentemente.
+print(fruits[5][1][4])
 fruits.sort()
+
 #['apple', 'banana', 'cherry', 'kiwi', 'mango']
 
 #ejercicio 42
@@ -268,6 +285,11 @@ lista_uno.extend(lista_dos)
 #lista_uno = ['a', 'b', 'c', 1, 2, 3]
 
 #ejercicio 49
+lista = [['watermelon', 'kiwi'], 'apple', 'orange', 'banana']
+print(lista[0][1])
+#kiwi
+
+#ejercicio se tamaño
 import sys
 
 lista = [1, 2, 3]
@@ -283,6 +305,8 @@ print("Tamaño en memoria de la lista:", tamano_lista, "bytes")
 # Tamaño en memoria de la lista: 88 bytes
 print("Tamaño en memoria de la tupla:", tamano_tupla, "bytes")
 # Tamaño en memoria de la tupla: 64 bytes
+
+
 
 #----------------------------
 
