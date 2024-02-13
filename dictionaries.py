@@ -139,7 +139,7 @@ diccionario = {
 diccionario.items()
 # dict_items([('marca', 'toyota'), ('electrico', False), ('año', 1980), ('color', ['red', 'blue', 'green'])])
 
-#ejercicio 15   #se puede usar las entencia de decision y la palabra clave in para determinar si la clave se encuentra.
+#ejercicio 15   #se puede usar las entencia de decision y la palabra clave in para determinar si la clave se encuentra. 
 diccionario = { 
     "marca": "toyota",
     "electrico": False,
