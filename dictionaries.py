@@ -179,89 +179,90 @@ diccionario.update({"marca":"nissan"})
 #----------------------------
 
 #ejercicio 18
-dict = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-dict["tamaño"] = "grande"
+diccionario["tamaño"] = "grande"
 # {'marca': 'toyota', 'electrico': False, 'año': 1980, 'color': ['red', 'blue', 'green'], 'tamaño': 'grande'}
 
 #ejercicio 19
-dict = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-dict.update({"tamaño":"pequeño"})
+diccionario.update({"tamaño":"pequeño"})
 # {'marca': 'toyota', 'electrico': False, 'año': 1980, 'color': ['red', 'blue', 'green'], 'tamaño': 'pequeño'}
 
 #----------------------------
 
 #ejercicio 19         el metodo pop() elimina el elemento entero con solo poner su clave.
-dict = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-dict.pop("año")
+diccionario.pop("año")
 # {'marca': 'toyota', 'electrico': False, 'color': ['red', 'blue', 'green']}
 
-#ejercicio 20        metodo dict remueve el ultimo elemento añadido.
-dict = {
+#ejercicio 20        metodo dict() remueve el ultimo elemento añadido.
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-dict.popitem()
+diccionario.popitem()
 # {'marca': 'toyota', 'electrico': False, 'año': 1980}
 
 #ejercicio 21      la palabra clave del elimita el elemento especificando su clave.
-dict = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-del dict["electrico"]
+del diccionario["electrico"]
 # {'marca': 'toyota', 'año': 1980, 'color': ['red', 'blue', 'green']}
 
 #ejercicio 22       tener en cuenta que "del" puede eliminar el diccionario completo.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-del dic
-print(dic)
+del diccionario
+print(diccionario)
+# NameError: name 'diccionario' is not defined
 
 #ejercicio 23    metodo clear() vacia pero NO elimina el diccionario.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-dic.clear()
-print(dic)
+diccionario.clear()
+print(diccionario)
 # {}
 
 #----------------------------
 
 #ejercicio 24     usando los bucles de esta forma solo nos devolvera la clave del elemento.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
 
-for x in dic:
+for x in diccionario:
     print(x)
 # marca
 # electrico
@@ -269,34 +270,34 @@ for x in dic:
 # color
     
 # ejercicio 25      en este caso de imprimen los valores de cada elemento.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
 
-for x in dic:   #prueba: acceder a una lista de un dic e imprimir sus elementos.
-    print(dic[x])
+for x in diccionario:   #prueba: acceder a una lista de un dic e imprimir sus elementos.
+    print(diccionario[x])
 # toyota
 # False
 # 1980
 # ['red', 'blue', 'green']
 
-for x in dic["color"]:
+for x in diccionario["color"]:
     print(x)
 #red
 #blue
 #green
     
 #ejercicio 26     o simplemente usar el metodo values() y asi recorrer y tomar los valores de cada elemento.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-for x in dic.values():
+for x in diccionario.values():
     print(x)
 #toyota
 #False
@@ -304,13 +305,13 @@ for x in dic.values():
 #['red', 'blue', 'green']
 
 #ejercicio 27    si se usa el metodo key() se obtienen las claves de los elementos.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-for x in dic.keys():
+for x in diccionario.keys():
     print(x)
 #marca
 #electrico
@@ -318,15 +319,133 @@ for x in dic.keys():
 #color
     
 #ejercicio 28   se usa el metodo items() para obtener tanto la clave como el valor del elemento del diccionario.
-dic = {
+diccionario = {
     "marca": "toyota",
     "electrico": False,
     "año": 1980,
     "color": ["red", "blue", "green"]
 }
-for x, y in dic.items():
+for x, y in diccionario.items():
     print(x, y)
 # marca toyota
 # electrico False
 # año 1980
 # color ['red', 'blue', 'green']
+    
+#----------------------------
+    
+#ejerccicio 29      #para copiar un diccioanrio NO se puede dict1=dict2. En este caso usamos metodo copy().
+diccionario = {
+    "marca": "toyota",
+    "electrico": False,
+    "año": 1980,
+    "color": ["red", "blue", "green"]
+}
+nuevo_dict = diccionario.copy()
+# {'marca': 'toyota', 'electrico': False, 'año': 1980, 'color': ['red', 'blue', 'green']}
+
+#ejercicio 30      #o suando el constructor ditc().
+diccionario = {
+    "marca": "toyota",
+    "electrico": False,
+    "año": 1980,
+    "color": ["red", "blue", "green"]
+}
+nuevo_dict = dict(diccionario)
+# {'marca': 'toyota', 'electrico': False, 'año': 1980, 'color': ['red', 'blue', 'green']}
+
+#----------------------------
+
+#ejercicio 31  #diccionario anidado.
+anidado = {
+    "uno":{
+        "nombre":"Pedrito",
+        "edad":15
+    },
+    "dos":{
+        "nombre":"Carlitos",
+        "edad":12
+    },
+    "tres":{
+        "nombre":"Fulanito",
+        "edad":12414
+    }
+}
+# {'uno': {'nombre': 'Pedrito', 'edad': 15}, 'dos': {'nombre': 'Carlitos', 'edad': 12}, 'tres': {'nombre': 'Fulanito', 'edad': 12414}}
+
+#ejercicio 32    #o por otro lado, se crea un diccionario que contenga a otros diccionarios.
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+dict_contenedor = {
+    "hijo1":child1,
+    "hijo2":child2,
+    "hijo3":child3 
+}
+print(dict_contenedor)
+# {'hijo1': {'name': 'Emil', 'year': 2004}, 'hijo2': {'name': 'Tobias', 'year': 2007}, 'hijo3': {'name': 'Linus', 'year': 2011}}
+
+#ejercicio 33     para acceder a los elementos
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+dict_contenedor = {
+    "hijo1":child1,
+    "hijo2":child2,
+    "hijo3":child3 
+}
+print(dict_contenedor["hijo2"]["year"])
+# 2007
+
+#ejercicio 34
+anidado = {
+    "uno":{
+        "nombre":"Pedrito",
+        "edad":15
+    },
+    "dos":{
+        "nombre":"Carlitos",
+        "edad":12
+    },
+    "tres":{
+        "nombre":"Fulanito",
+        "edad":12414
+    }
+}
+print(anidado["tres"]["nombre"])
+# Fulanito
+
+#----------------------------
+
+#METODOS
+# clear()	    Removes all the elements from the dictionary
+# copy()	    Returns a copy of the dictionary
+# fromkeys()	Returns a dictionary with the specified keys and value
+# get()	        Returns the value of the specified key
+# items()	    Returns a list containing a tuple for each key value pair
+# keys()	    Returns a list containing the dictionary's keys
+# pop()	        Removes the element with the specified key
+# popitem()	    Removes the last inserted key-value pair
+# setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+# update()	    Updates the dictionary with the specified key-value pairs
+# values()	    Returns a list of all the values in the dictionary
