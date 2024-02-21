@@ -12,3 +12,4 @@ git branch (muestra mis ramas y en la que me encuentro con un * antes del nombre
 git checkout -b feature/nomre_branch (crear una rama)
 git checkout "nombre de la rama" (para cambiar de rama)
 git checkout "nombre de archivo" (para quitar cambios que no van en esa rama)
+git branch -D nombre de la rama (para eliminar una rama)

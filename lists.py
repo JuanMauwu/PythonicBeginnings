@@ -151,6 +151,7 @@ for x in sports:
 sports = ["swimming", "soccer", "basketball"] 
 for x in range(len(sports)):
     print(sports[x])
+    print(x)
 #swimming
 #soccer
 #basketball
@@ -230,7 +231,11 @@ new = [x if x == "banana" else "orange" for x in fruits] #devuelva x si x es == 
 #ejercicio 41 
 fruits = [ "banana", "kiwi", "cherry", "mango", "apple", ["watermelon", "orange"]] #metodo para ordenar ascendentemente.
 print(fruits[5][1][4])
+# g
+
+fruits = [ "banana", "kiwi", "cherry", "mango", "apple"]
 fruits.sort()
+
 
 #['apple', 'banana', 'cherry', 'kiwi', 'mango']
 
@@ -252,12 +257,14 @@ fruits.reverse()
 #----------------------------
 
 #ejercicio 45
-#copiar una lista lista1 = lista2 XXXXXXXX
+#copiar una lista lista1 = lista2 
 #forma correcta con metodo copy(), o con metodo list()
 
-fruits = [ "banana", "kiwi", "cherry", "mango", "apple"]
+fruits = ["kiwi", "cherry", "mango", "apple"]
 new_list = fruits.copy()
 #['banana', 'kiwi', 'cherry', 'mango', 'apple']
+
+lista = fruits
 
 fruits = [ "banana", "kiwi", "cherry", "mango", "apple"]
 new = list(fruits)
