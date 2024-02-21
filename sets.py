@@ -7,8 +7,8 @@ print(new_set)
 #{'banana', 'watermelon', 'cherry'}
 
 #ejercicio 3
-set = {'banana', 'watermelon', 'cherry', True, 1} #True y 1 en los sets valen lo mismo. Se puede ver que el set al imprimirlo aparece EN DESORDEN
-print(set)                                        #Igual el 0 y el False.
+conjunto = {'banana', 'watermelon', 'cherry', True, 1} #True y 1 en los conjuntos valen lo mismo. Se puede ver que el set al imprimirlo aparece EN DESORDEN
+print(conjunto)                                        #Igual el 0 y el False.
 #{'cherry', True, 'banana', 'watermelon'}
 
 #ejercicio 4
@@ -25,12 +25,16 @@ type(variado)
 # <class 'set'>
 
 #ejercicio 7
+variado = tuple(["hello", 1, 1.5, False, True]) #contructor de la tupla-
+variado = set(["hello", 1, 1.5, False, True]) #contructor de los set-
+variado = set(("hello", 1, 1.5, False, True))
 variado = tuple({"hello", 1, 1.5, False, True}) #contructor de la tupla-
-
+variado = list({"hello", 1, 1.5, False, True})
+variado = list(("hello", 1, 1.5, False, True))
 #----------------------------
 
 #ejercicio 8
-variado = tuple({"hello", 2, 1.5, False, True}) #con las tuplas no podemos acceder a los elementos po el indice, toca po bucles o usando condicionales.
+variado = {"hello", 2, 1.5, False, True} #con los set no podemos acceder a los elementos por el indice, toca po bucles o usando condicionales.
 for x in variado:
     print(x)
 #False
@@ -38,6 +42,10 @@ for x in variado:
 #2
 #True
 #hello
+
+sports = {1, 2, 3, 4} 
+for x in range(len(sports)):
+    print(sports[x])
 
 #ejercicio 9
 variado = tuple({"hello", 2, 1.5, False, True}) #verificar si un elemento en particular se encuentra en el set.
@@ -53,18 +61,23 @@ numbers.add(1000)           #usar metodo add() para agragar elementos
 
 #ejercicio 11
 numbers = {1, 2, 3, 4}          
-new_set = ["banana", "cherry", "watermelon"]    #metodo update() sirve para agregar elementos de otro iterable.
+new_set = ("banana", "cherry", "watermelon")    #metodo update() sirve para agregar elementos de otro iterable.
 numbers.update(new_set)
 #{1, 2, 3, 4, 'banana', 'cherry', 'watermelon'}
 
-#ejercicio 12       #metodo intersection() para crear una nueva tupla con los valores presentes en x y Y.
+#ejercicio 12       #metodo intersection() para crear un nuevo  con los valores presentes en x y Y.
 x = {1,2,3}
 y = {1,4,5,6}
 z = x.intersection(y)
 # {1}
 
+x = {1,2,3}
+y = {1,4,5,6}
+z = x.union(y)
+# {1, 2, 3, 4, 5, 6}
+
 #ejercicio 13
-x = {"apple", "banana", "lemon"}    # A x se le dan los elementos de que no esten presentes tanto en x como en y.
+x = {"apple", "banana", "lemon"}    # A x se le dan los elementos que no esten presentes tanto en x como en y.
 y = {"google", "kiwi", "apple"}
 x.symmetric_difference_update(y)
 print(x) #{'lemon', 'kiwi', 'google', 'banana'}
