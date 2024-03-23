@@ -42,7 +42,7 @@ function(niño3="Juan", niño2="Pedrito", niño1="Carlitos")
 #El niño mas joven es: Juan
 
 #ejercicio 7
-def my_function(**kid):
+def my_function(**kid):                     #si no sabemos el numero de palabras claves que tendremos como argumento **.
   print("His last name is " + kid["lname"])
 
 my_function(fname = "Tobias", lname = "Refsnes")
@@ -90,7 +90,7 @@ my_function(x = 3)           #TypeError: my_function() got some positional-only 
 
 
 #ejercicio 12
-def my_function(*, x):      #para especificar que el argumento entre con calve-valor.
+def my_function(*, x):      #para especificar que el argumento entre con clave-valor.
   print(x)
 
 my_function(x = 3) #3
@@ -113,3 +113,27 @@ def tri_recursion(k):   #recursion
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+
+#ejercicio 15   sobre factorial usando recursion. 
+def factorial(n):
+   if n == 0:
+      return 1
+   else:
+      return n * factorial(n - 1) #factorial de 5 es = 5*factorial de 4, pero factorial de 4 es = 4*factorial de 3.....
+                                  #5*4*3*2*1
+factorial(5) #120
+
+#-------------------------------------------
+#Funciones lambda
+#No necesitas definirla con un nombre(anonimas)
+#Ideal para definir funciones pequeñas
+
+#Sintaxis-->   lambda aguments : expression
+
+#ejercicio 16
+x = lambda n : n + 5
+x(5) #10
+
+#ejercicio 17
+suma = lambda x, y : x + y   #con varios argumentos
+suma(10,20) #30
