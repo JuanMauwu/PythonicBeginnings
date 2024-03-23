@@ -137,3 +137,56 @@ x(5) #10
 #ejercicio 17
 suma = lambda x, y : x + y   #con varios argumentos
 suma(10,20) #30
+
+#Ejercicios implementando estructuras de python.
+
+"""
+1.Crea una función que genere una lista de números del 1 al 10 y otra que impirma esa lista.
+"""
+
+numbers = []
+
+def add_numbers(list):
+   x = 0
+   while x < 10:
+    list.append(x + 1)
+    x +=1
+
+def print_list(list):
+   for x in list:
+      print(x)
+
+add_numbers(numbers) #se llena la lista
+print_list(numbers)  #se imprime la lista
+#1
+#2
+#3
+#4
+#5
+#6
+#7
+#8
+#9
+#10
+
+"""
+2.Crea una función que llene un diccionario donde las claves sean los nombres de tus amigos y los 
+valores sean sus edades. Luego debe que debera imprimir el nombre y la edad de cada amigo.
+"""
+
+def new_dictionary():
+    friends = {
+        "Pedrito": 12,
+        "Carlitos": 32,
+        "Fulanito": 16
+    }
+    
+    for name, age in friends.items():  #se usa el metodo de los diccionarios items()
+       print(name, age)
+
+new_dictionary()
+#Pedrito 12
+#Carlitos 32
+#Fulanito 16
+
+# items()	    Returns a list containing a tuple for each key value pair
