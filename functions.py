@@ -141,7 +141,7 @@ suma(10,20) #30
 #Ejercicios implementando estructuras de python.
 
 """
-1.Crea una función que genere una lista de números del 1 al 10 y otra que impirma esa lista.
+1.Crea una función que genere una lista de números del 1 al 10 y otra que imprima esa lista.
 """
 
 numbers = []
@@ -190,3 +190,19 @@ new_dictionary()
 #Fulanito 16
 
 # items()	    Returns a list containing a tuple for each key value pair
+
+
+"""
+3.Escribe una función que tome una lista de números y devuelva un diccionario donde las claves sean 
+los números de la lista y los valores sean el cuadrado de cada número.
+"""
+
+def new_dictionary(list):
+   dictionary = {}
+   for x in list:
+      dictionary[x] = x**2  #se le asigna clave y su valor(numero al cuadrado).
+   return dictionary
+
+lista = [1,2,3,4,5,6,7,8,9,10]   
+new_dictionary(lista)
+#{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
