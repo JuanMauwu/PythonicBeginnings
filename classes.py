@@ -82,3 +82,21 @@ p1.age     #AttributeError: 'Persona' object has no attribute 'age'
 #ejercicio 8
 class Person:  #si por alguna razon se necesita una clase vacia se debe usar pass para evitar unn error.
   pass
+
+#ejercicio 9 "herencia" 
+class Person:                         #clase padre.
+    def __init__(self, fname, lname): 
+        self.fname = fname
+        self.lname = lname
+
+    def print_name(self):
+        print(self.fname, self.lname)
+
+class Student(Person):                      #clase hija que hereda de Person los stributos fname, lname y el metodo print_name().
+    def __init__(self,fname,lname, grade):  #primero los atributos que hereda y luego el propio(grade).
+        super().__init__(fname, lname)      #se utiliza la funcion super() para llamar al constructor de la clase padre.
+        self.grade = grade                  #por ultimo se le asigna el valor a los atributos propios de la clase hija.
+
+student1 = Student("Juan", "Velásquez", 11)
+student1.print_name()                         #hereda fname, lname y el metodo print_name().
+# Juan Velásquez
