@@ -43,7 +43,7 @@ function(niño3="Juan", niño2="Pedrito", niño1="Carlitos")
 
 #ejercicio 7
 def my_function(**kid):                     #si no sabemos el numero de palabras claves que tendremos como argumento **.
-  print("His last name is " + kid["lname"])
+    print("His last name is " + kid["lname"])
 
 my_function(fname = "Tobias", lname = "Refsnes")
 
@@ -79,11 +79,11 @@ funcion_retorno(5)
 
 #ejercicio 10        si por alguna razon queremos una funcion sin contenido debemos agregar pass.
 def myfunction():
-  pass
+    pass
 
 #ejercicio 11
 def my_function(x, /):       
-  print(x)
+    print(x)
 
 my_function(3) #3            #si se agrega ",/" la funcion no permitira argumentos tipo clave=dato
 my_function(x = 3)           #TypeError: my_function() got some positional-only arguments passed as keyword arguments: 'x'
@@ -91,35 +91,35 @@ my_function(x = 3)           #TypeError: my_function() got some positional-only 
 
 #ejercicio 12
 def my_function(*, x):      #para especificar que el argumento entre con clave-valor.
-  print(x)
+    print(x)
 
 my_function(x = 3) #3
 my_function(3)             #TypeError: my_function() takes 0 positional arguments but 1 was given
 
 #ejercicio 13
 def my_function(a, b, /, *, c, d):   #se pueden combinar:( a y b sin clave-valor), (c y d con clave-valor)
-  print(a + b + c + d)
+    print(a + b + c + d)
 
 my_function(5, 6, c = 7, d = 8) #26
 
 #ejercicio 14
 def tri_recursion(k):   #recursion 
-  if k > 0:
-    result = k + tri_recursion(k - 1)   
-    print(result)
-  else:     
-    result = 0
-  return result
+    if k > 0:
+        result = k + tri_recursion(k - 1)   
+        print(result)
+    else:     
+        result = 0
+        return result
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
 
 #ejercicio 15   sobre factorial usando recursion. 
 def factorial(n):
-   if n == 0:
-      return 1
-   else:
-      return n * factorial(n - 1) #factorial de 5 es = 5*factorial de 4, pero factorial de 4 es = 4*factorial de 3.....
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1) #factorial de 5 es = 5*factorial de 4, pero factorial de 4 es = 4*factorial de 3.....
                                   #5*4*3*2*1
 factorial(5) #120
 
@@ -147,14 +147,16 @@ suma(10,20) #30
 numbers = []
 
 def add_numbers(list):
-   x = 0
-   while x < 10:
-    list.append(x + 1)
-    x +=1
+    x = 0
+    while x < 10:
+        list.append(x + 1)
+        x +=1
+    return list
+
 
 def print_list(list):
-   for x in list:
-      print(x)
+    for x in list:
+        print(x)
 
 add_numbers(numbers) #se llena la lista
 print_list(numbers)  #se imprime la lista
@@ -181,7 +183,7 @@ def new_dictionary():
         "Fulanito": 16
     }
     
-    for name, age in friends.items():  #se usa el metodo de los diccionarios items()
+    for name, age in friends.items():  #se usa el metodo de diccionarios items()
        print(name, age)
 
 new_dictionary()
@@ -198,10 +200,10 @@ los números de la lista y los valores sean el cuadrado de cada número.
 """
 
 def new_dictionary(list):
-   dictionary = {}
-   for x in list:
-      dictionary[x] = x**2  #se le asigna clave y su valor(numero al cuadrado).
-   return dictionary
+    dictionary = {}
+    for x in list:
+        dictionary[x] = x**2  #se le asigna clave y su valor(numero al cuadrado).
+    return dictionary
 
 lista = [1,2,3,4,5,6,7,8,9,10]   
 new_dictionary(lista)
