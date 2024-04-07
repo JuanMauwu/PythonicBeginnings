@@ -208,3 +208,38 @@ def new_dictionary(list):
 lista = [1,2,3,4,5,6,7,8,9,10]   
 new_dictionary(lista)
 #{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+
+#ejercicio 18 calculadora usando anotaciones de tipo e implementando sentencias de decision 
+def  sumar(sumando_1: float, sumando_2: float) -> float:
+    suma = sumando_1 + sumando_2
+    return suma
+
+def restar(minuendo: int, sustraendo: int) -> float:
+    diferencia = minuendo - sustraendo
+    return diferencia
+
+def multiplicar(multiplicando: int, multiplicador: int) -> int:
+    producto = multiplicando * multiplicador
+    return producto
+
+def dividir(dividendo: int, divisor: float) -> float:
+    cociente = dividendo / divisor
+    residuo = dividendo % divisor
+    return cociente, residuo
+
+#suma 1, resta 2, multiplicacion 3, division 4
+salir = 0
+
+while salir != "1":
+
+    operacion = input("Operacion: 1, 2, 3 o 4 -> ")
+
+    if operacion == "1":
+        print("Esta operacion solo permite los dos numeros flotantes")
+        num1 = float(input("Numero 1: "))
+        num2 = float(input("Numero 2: "))
+        print(sumar(num1, num2))
+
+    #elif operacion == "2":
+        
+    salir = input("Escriba 1 para salir: ")
